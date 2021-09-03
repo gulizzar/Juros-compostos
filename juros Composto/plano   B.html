@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <Head>
+        <meta charset="utf-8">
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+    </Head>
+    <header>
+        <div class="container"> <h1 class="display-2 text-center text-info"> Visual Calculation </h1> </div>
+    </header> 
+    <body class="bg-dark">
+        <div class="container" id="isso">
+            <form class="calc-form" id="calc-form" method="POST">
+                <div class="row justify-content-center">
+                    <div class="col-4">   
+                        <div class=" mb-3">
+                            <label for="nome" class="form-label mb-0 mt-3"><h5 class="text-primary">Nome</h5></label>        
+                            <input type="text" class="form-control nome" placeholder="Nome Completo" aria-label="Nome Completo" id="gustavo" name="nome" aria-describedby="nome completo">            
+                        </div> 
+                        <div class=" mb-3">
+                            <label for="mensalidade" class="form-label mb-0 mt-3"><h5 class="text-primary">Mensalidade</h5></label>        
+                            <input type="number"  class="form-control" placeholder="Valor Mensal" aria-label="Valor Mensal" id="valor" name="valor" aria-describedby="Valor Mensal">
+                        </div>
+                        <div class=" mb-3">
+                            <label for="tempo" class="form-label mb-0 mt-3"><h5 class="text-primary">Tempo de Investimento</h5></label>        
+                            <input type="number"  class="form-control" placeholder="tempo de investimento" aria-label="tempo de investimento" id="tempo" name="tempo" aria-describedby="tempo de investimento">
+                        </div>
+                            
+                            <button type="submit" class="btn btn-primary" onclick="calculojuros(); return false">Simular</button>
+                            </div>             
+                    </div>
+                </div>    
+            </form>    
+        </div>
+        <div class="container d-none" id="result">
+            <div col-5 row justify-content-center>
+                <div class="text-center text-white">
+                    <p class="text-break fs-1"> Olá <span class="nameresult" id="nameresult">...</span> Juntando <span class="mensalidaderesult">...</span>R$ por mês, você terá
+                      <span class="formula">...</span>R$  em  <span class="data">...</span>  meses. </p>
+                      <button type="submit" class="btn btn-primary mt-3" onclick="voltar(); return false;">Voltar</button>
+                </div>      
+            </div>
+        </div>
+
+        <script type="text/javascript" src="esse.js"></script>
+    </body>
+</html>   
